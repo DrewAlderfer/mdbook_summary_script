@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "auto_book"
+version = "0.1.0"
+description = ""
+authors = ["Andrew Alderfer <drew@drewalderfer.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.3"
+
+[tool.poetry.group.utils]
+optional = true
+
+[tool.poetry.group.utils.dependencies]
+
+[tool.pyright]
+include = ["src"]
+exclude = [
+    "**/__pycache__",
+    "./.ipynb_checkpoints",
+]
+venvPath = "~/.cache/pypoetry/virtualenvs"
+# venv = "aipg-8e5V84G1-py3.11"
+
+reportMissingTypeStubs = false
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
